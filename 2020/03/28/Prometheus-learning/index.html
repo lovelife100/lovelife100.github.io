@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="我们一路奋战，不是为了改变世界，而是为了不让世界改变我们">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱生活每一天">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="从Zabbix到Prometheus，同程艺龙数据库监控系统的实践 为什么说Prometheus是足以取代Zabbix的监控神器？Prometheus 不完全避坑指南 Prometheus Operator 自动发现以及数据持久化 Prometheus 记录规则的使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Prometheus learning">
+<meta property="og:url" content="http://yoursite.com/2020/03/28/Prometheus-learning/index.html">
 <meta property="og:site_name" content="爱生活每一天">
-<meta property="og:description" content="我们一路奋战，不是为了改变世界，而是为了不让世界改变我们">
+<meta property="og:description" content="从Zabbix到Prometheus，同程艺龙数据库监控系统的实践 为什么说Prometheus是足以取代Zabbix的监控神器？Prometheus 不完全避坑指南 Prometheus Operator 自动发现以及数据持久化 Prometheus 记录规则的使用">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-28T14:49:19.000Z">
+<meta property="article:modified_time" content="2020-03-28T14:50:00.733Z">
 <meta property="article:author" content="Lovelife">
+<meta property="article:tag" content="prometheus">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/">
+<link rel="canonical" href="http://yoursite.com/2020/03/28/Prometheus-learning/">
 
 
 <script id="page-configurations">
@@ -38,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | 爱生活每一天</title>
+  <title>Prometheus learning | 爱生活每一天</title>
   
 
 
@@ -163,52 +166,97 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 1 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/28/Prometheus-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Lovelife">
+      <meta itemprop="description" content="我们一路奋战，不是为了改变世界，而是为了不让世界改变我们">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱生活每一天">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Prometheus learning
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-28 22:49:19 / 修改时间：22:50:00" itemprop="dateCreated datePublished" datetime="2020-03-28T22:49:19+08:00">2020-03-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p><a href="https://mp.weixin.qq.com/s/x0kJT2CvfD-varz5MIUoMQ" target="_blank" rel="noopener">从Zabbix到Prometheus，同程艺龙数据库监控系统的实践</a></p>
+<p><a href="https://mp.weixin.qq.com/s/PrGM0kO9oyM2sJ3F7g0qNA" target="_blank" rel="noopener">为什么说Prometheus是足以取代Zabbix的监控神器？</a><br><a href="https://aleiwu.com/post/prometheus-bp/" target="_blank" rel="noopener">Prometheus 不完全避坑指南</a></p>
+<p><a href="https://www.qikqiak.com/post/prometheus-operator-advance/" target="_blank" rel="noopener">Prometheus Operator 自动发现以及数据持久化</a></p>
+<p><a href="https://www.qikqiak.com/post/recording-rules-on-prometheus/" target="_blank" rel="noopener">Prometheus 记录规则的使用</a></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-28T22:49:19+08:00"
-              content="2020-03-28">
-          03-28
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Lovelife
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2020/03/28/Prometheus-learning/" title="Prometheus learning">http://yoursite.com/2020/03/28/Prometheus-learning/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/03/28/Prometheus-learning/" itemprop="url">
-            <span itemprop="name">Prometheus learning</span>
-          </a>
-      </div>
 
-    </header>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/prometheus/" rel="tag"># prometheus</a>
+          </div>
+
+        
+
+
+        
+      </footer>
+    
   </article>
+  
+  
+  
 
-
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
