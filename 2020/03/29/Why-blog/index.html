@@ -17,23 +17,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"lovelife100.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="从Zabbix到Prometheus，同程艺龙数据库监控系统的实践 为什么说Prometheus是足以取代Zabbix的监控神器？Prometheus 不完全避坑指南 Prometheus Operator 自动发现以及数据持久化 Prometheus 记录规则的使用">
+  <meta name="description" content="一直以来都会看到很多文章鼓励大家去写作，大部分的文章都会列出写作的好处，但是还是有很多人不去写，作为不爱写作的成员之一，我也来说说我的情况。  个人写作的历史我之前写东西是上大学的时候（大概是05-06年，年龄暴露…）在人人网，QQ空间写过日记之类的东西，当时我的同学还会上来看，也给了我一些评论，增加了我的动力。如今再去看的时候，是很青涩了。但是留下来的文字就像刻在那一样，始终让人印象深刻。写作这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Prometheus learning">
-<meta property="og:url" content="http://yoursite.com/2020/03/28/Prometheus-learning/index.html">
+<meta property="og:title" content="为什么要写博客">
+<meta property="og:url" content="https://lovelife100.github.io/2020/03/29/Why-blog/index.html">
 <meta property="og:site_name" content="爱生活每一天">
-<meta property="og:description" content="从Zabbix到Prometheus，同程艺龙数据库监控系统的实践 为什么说Prometheus是足以取代Zabbix的监控神器？Prometheus 不完全避坑指南 Prometheus Operator 自动发现以及数据持久化 Prometheus 记录规则的使用">
+<meta property="og:description" content="一直以来都会看到很多文章鼓励大家去写作，大部分的文章都会列出写作的好处，但是还是有很多人不去写，作为不爱写作的成员之一，我也来说说我的情况。  个人写作的历史我之前写东西是上大学的时候（大概是05-06年，年龄暴露…）在人人网，QQ空间写过日记之类的东西，当时我的同学还会上来看，也给了我一些评论，增加了我的动力。如今再去看的时候，是很青涩了。但是留下来的文字就像刻在那一样，始终让人印象深刻。写作这">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-28T14:49:19.000Z">
-<meta property="article:modified_time" content="2020-03-28T14:50:00.733Z">
+<meta property="article:published_time" content="2020-03-29T10:12:23.000Z">
+<meta property="article:modified_time" content="2020-03-29T10:16:33.142Z">
 <meta property="article:author" content="Lovelife">
-<meta property="article:tag" content="prometheus">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/03/28/Prometheus-learning/">
+<link rel="canonical" href="https://lovelife100.github.io/2020/03/29/Why-blog/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>Prometheus learning | 爱生活每一天</title>
+  <title>为什么要写博客 | 爱生活每一天</title>
   
 
 
@@ -158,8 +157,6 @@
     <span>0%</span>
   </div>
 
-  <a href="https://github.com/lovelife100" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
 
     <main class="main">
       <div class="main-inner">
@@ -174,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/28/Prometheus-learning/">
+    <link itemprop="mainEntityOfPage" href="https://lovelife100.github.io/2020/03/29/Why-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -187,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Prometheus learning
+          为什么要写博客
         </h1>
 
         <div class="post-meta">
@@ -198,7 +195,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-28 22:49:19 / 修改时间：22:50:00" itemprop="dateCreated datePublished" datetime="2020-03-28T22:49:19+08:00">2020-03-28</time>
+              <time title="创建时间：2020-03-29 18:12:23 / 修改时间：18:16:33" itemprop="dateCreated datePublished" datetime="2020-03-29T18:12:23+08:00">2020-03-29</time>
             </span>
 
           
@@ -212,10 +209,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://mp.weixin.qq.com/s/x0kJT2CvfD-varz5MIUoMQ" target="_blank" rel="noopener">从Zabbix到Prometheus，同程艺龙数据库监控系统的实践</a></p>
-<p><a href="https://mp.weixin.qq.com/s/PrGM0kO9oyM2sJ3F7g0qNA" target="_blank" rel="noopener">为什么说Prometheus是足以取代Zabbix的监控神器？</a><br><a href="https://aleiwu.com/post/prometheus-bp/" target="_blank" rel="noopener">Prometheus 不完全避坑指南</a></p>
-<p><a href="https://www.qikqiak.com/post/prometheus-operator-advance/" target="_blank" rel="noopener">Prometheus Operator 自动发现以及数据持久化</a></p>
-<p><a href="https://www.qikqiak.com/post/recording-rules-on-prometheus/" target="_blank" rel="noopener">Prometheus 记录规则的使用</a></p>
+        <p>一直以来都会看到很多文章鼓励大家去写作，大部分的文章都会列出写作的好处，但是还是有很多人不去写，作为不爱写作的成员之一，我也来说说我的情况。 </p>
+<h3 id="个人写作的历史"><a href="#个人写作的历史" class="headerlink" title="个人写作的历史"></a>个人写作的历史</h3><p>我之前写东西是上大学的时候（大概是05-06年，年龄暴露…）在人人网，QQ空间写过日记之类的东西，当时我的同学还会上来看，也给了我一些评论，增加了我的动力。如今再去看的时候，是很青涩了。但是留下来的文字就像刻在那一样，始终让人印象深刻。<br>写作这件事，如果你能坚持下去，其实是挺好的，但是一旦放下了，要想重新拿起来就很难。毕业之后我再也没有好好地去写东西，或者写了一些简短的感悟放到有道云笔记或Evernote里再没拿出来。<br>这么一看我比网上很多人都要差很多吧。</p>
+<h3 id="之前没能继续写作的原因"><a href="#之前没能继续写作的原因" class="headerlink" title="之前没能继续写作的原因"></a>之前没能继续写作的原因</h3><p>我总结了一下我自己没有继续写作的原因</p>
+<pre><code>1. 懒  
+   很简单，就一个字懒，每个人都会有惰性。
+   多少次我都一开始热情似火，可没几天因为其他事情一忙就不写，然后就没有然后了。
+2. 没东西可写      
+   肚子里的墨水就那么点，写了一阵就没有东西可写了。
+3. 坚持不容易  
+   放弃很容易，只要对自己说自己做不到或者不喜欢做，随便找个理由就可以，但是坚持很难，坚持去做正确的事情更难。
+4. 觉得自己写得不好
+   任何技术方面的内容，你到网上都能搜到一大把，写得都比自己写的好，  
+   加上考虑隐私，不想让自己暴露在公众的视角下，所以就会放弃。</code></pre><h3 id="重新写博客的原因"><a href="#重新写博客的原因" class="headerlink" title="重新写博客的原因"></a>重新写博客的原因</h3><p>现在是2020年了，自己也想要做个改变，顺便说下我想写作的原因：</p>
+<pre><code>1. 记录自己的思想感悟
+   虽然当年写的东西现在看来很青涩，但是有这个记录在，就很好，以后还能看到现在的自己写的东西。  
+   而不像之工作这几年，虽然感觉做了不少事情，但是没有记录，也很容易就会忘记当时自己是怎么过来的了。
+2. 在网上去寻找思想的碰撞
+   虽然可能写得不好，但是万一我这样的小透明被人看到，能够给我发点评论什么的，
+   互相能够交流，还能让我提高得更多，不是很棒吗！
+3. 写作的过程就是完善自己思考的过程。
+   将自己的思考与研究的东西写出来，迫使自己多去思考，多去想想自己思考里的逻辑问题。
+   它会倒逼自己去更仔细的思考，曾经以为自己已经理解的东西，是否真如自己所想的那样。  
+   最好的学习方式就是把自己学习到东西教给别人，所以这个对于自身的提高很明显。</code></pre><p>最后立个flag，希望能坚持写完今年吧，不论中间是否中断，但是一定要写完今年。</p>
 
     </div>
 
@@ -231,7 +247,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/03/28/Prometheus-learning/" title="Prometheus learning">http://yoursite.com/2020/03/28/Prometheus-learning/</a>
+    <a href="https://lovelife100.github.io/2020/03/29/Why-blog/" title="为什么要写博客">https://lovelife100.github.io/2020/03/29/Why-blog/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -241,9 +257,6 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/prometheus/" rel="tag"># prometheus</a>
-          </div>
 
         
 
@@ -307,6 +320,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#个人写作的历史"><span class="nav-number">1.</span> <span class="nav-text">个人写作的历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#之前没能继续写作的原因"><span class="nav-number">2.</span> <span class="nav-text">之前没能继续写作的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新写博客的原因"><span class="nav-number">3.</span> <span class="nav-text">重新写博客的原因</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -325,10 +339,6 @@
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
